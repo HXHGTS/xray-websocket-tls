@@ -6,7 +6,7 @@
 
 KVM/XEN机器执行(CentOS7):
 
-`yum install -y gcc wget && wget https://raw.githubusercontent.com/HXHGTS/xray-websocket-tls/main/v2ray.c -O v2ray.c && chmod +x v2ray.c && gcc -o v2ray v2ray.c && ./v2ray`
+`yum install -y gcc wget curl && wget https://raw.githubusercontent.com/HXHGTS/xray-websocket-tls/main/v2ray.c -O v2ray.c && chmod +x v2ray.c && gcc -o v2ray v2ray.c && ./v2ray`
 
 第一次点击安装后会自动升级系统内核并触发重启，重启后输入
 
