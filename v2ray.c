@@ -120,7 +120,7 @@ int install_xray() {
     fscanf(config, "%s", sni);
     fclose(config);
     system("setenforce 0");
-    system("yum install -y curl uuidgen bind-utils qrencode");
+    system("yum install -y curl bind-utils qrencode");
     printf("正在运行xray安装脚本. . .\n");
     system("wget https://github.com/XTLS/Xray-install/raw/main/install-release.sh -O install-release.sh");
     system("chmod +x install-release.sh && bash install-release.sh");
@@ -132,7 +132,7 @@ int install_xray() {
     printf("正在生成配置文件. . .\n");
     system("curl https://raw.githubusercontent.com/HXHGTS/xray-websocket-tls/main/config.json.1 > /usr/local/etc/xray/config.json");
     printf("正在生成UUID. . .\n");
-    system("uuidgen > /usr/local/etc/xray/uuid.conf");
+    system("xray uuid > /usr/local/etc/xray/uuid.conf");
     config = fopen("/usr/local/etc/xray/uuid.conf", "r");
     fscanf(config, "%s", uuid);
     fclose(config);
