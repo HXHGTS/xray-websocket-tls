@@ -125,7 +125,7 @@ int install_xray() {
     system("cp -rf /root/1.pem /usr/local/etc/xray/certificate.pem");
     system("cp -rf /root/2.pem /usr/local/etc/xray/private.pem");
     printf("正在生成配置文件. . .\n");
-    system("curl https://cdn.jsdelivr.net/gh/HXHGTS/xray-websocket-tls/config.json.1 > /usr/local/etc/xray/config.json");
+    system("curl https://raw.githubusercontent.com/HXHGTS/xray-websocket-tls/main/config.json.1 > /usr/local/etc/xray/config.json");
     printf("正在生成UUID. . .\n");
     system("uuidgen > /usr/local/etc/xray/uuid.conf");
     config = fopen("/usr/local/etc/xray/uuid.conf", "r");
@@ -134,7 +134,7 @@ int install_xray() {
     config = fopen("/usr/local/etc/xray/config.json", "a");
     fprintf(config, "                        \"id\": \"%s\"\n", uuid);
     fclose(config);
-    system("curl https://cdn.jsdelivr.net/gh/HXHGTS/xray-websocket-tls/config.json.2 >> /usr/local/etc/xray/config.json");
+    system("curl https://raw.githubusercontent.com/HXHGTS/xray-websocket-tls/main/config.json.2 >> /usr/local/etc/xray/config.json");
     printf("正在启动xray并将xray写入开机引导项. . .\n");
     system("systemctl enable xray");
     system("systemctl start xray");
