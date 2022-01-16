@@ -8,6 +8,10 @@ KVM/XEN机器执行(CentOS7):
 
 `yum install -y gcc wget curl && wget https://raw.githubusercontent.com/HXHGTS/xray-websocket-tls/main/v2ray.c -O v2ray.c && chmod +x v2ray.c && gcc -o v2ray v2ray.c && ./v2ray`
 
+KVM/XEN机器执行(CentOS8):
+
+`yum install -y gcc wget curl && wget https://raw.githubusercontent.com/HXHGTS/xray-websocket-tls/main/v2ray_centos8.c -O v2ray.c && chmod +x v2ray.c && gcc -o v2ray v2ray.c && ./v2ray`
+
 KVM/XEN机器执行(Debian10):
 
 `apt install -y build-essential wget curl && wget https://raw.githubusercontent.com/HXHGTS/xray-websocket-tls/main/v2ray_debian10.c -O v2ray.c && chmod +x v2ray.c && gcc -o v2ray v2ray.c && ./v2ray`
