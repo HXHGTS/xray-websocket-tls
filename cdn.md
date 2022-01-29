@@ -32,7 +32,7 @@ fetch(request)
 
 一个典型Clash配置:
 ```
-  - {name: xxxxxxxxxx, server: 1.0.0.1, port: 443, type: vmess, uuid: xxxxxxxxx-xxxx-xxxx-xxxxxx, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /xxxxx, ws-headers: {Host: xxx.xxxxxx.workers.dev}}
+  - {name: xxxxxxxxxx, server: 1.0.0.1, port: 443, type: vmess, uuid: xxxxxxxxx-xxxx-xxxx-xxxxxx, alterId: 0, cipher: auto, tls: true, network: ws, udp: true, ws-opts: {path: /iso, headers:{Host: xxx.xxxxxx.workers.dev}}}
 ```
 另一种写法:
 ```
