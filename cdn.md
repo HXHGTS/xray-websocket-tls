@@ -45,9 +45,10 @@ fetch(request)
     cipher: auto
     tls: true
     network: ws
-    ws-path: /iso
-    ws-headers:
-      Host: xxxxxxxxxx
     udp: true
+    ws-opts:
+      path: /iso
+      headers:
+        Host: xxx.xxxxxx.workers.dev
 ```
 1.0.0.1请下载[Cloudflare ip优选工具](https://github.com/XIU2/CloudflareSpeedTest)，根据实际带宽优选CDN加速ip，最后用优选的ip进行替换，host填Worker的网址，不是服务器网址！！！
